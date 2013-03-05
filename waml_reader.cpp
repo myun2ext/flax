@@ -26,9 +26,18 @@ class WamlDocument
 };
 
 ////////////////////////////////
-WamlLine waml_parse_line(const char* line)
+WamlLine waml_parse_line(::std::string line)
 {
-	printf("%s\n");
+	//printf("%s\n");
+	switch(line[0])
+	{
+	case '-':
+	case '*':
+		break;
+	case ' '
+		break;
+	default:
+	}
 	return 0;
 }
 
@@ -39,7 +48,7 @@ WamlDocument waml_read(const char* p)
 	for(; *p; p++)
 	{
 		if ( *p == '\n' )
-			doc += flax_line(line.c_str());
+			doc += flax_line(line);
 		else
 			line += *p;
 	}
