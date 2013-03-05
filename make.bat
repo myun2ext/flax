@@ -4,8 +4,9 @@ set CFLAGS=-O3
 set OUTFILE=flax2.exe
 
 @echo on
-
 %CC% %INCLUDES% %CFLAGS% flax2.cpp -o %OUTFILE%
 
-%OUTFILE%
-pause
+@REM # Test Exec
+%OUTFILE% example.flax
+
+@pause
