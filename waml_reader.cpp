@@ -40,6 +40,9 @@ WamlLine waml_parse_line(::std::string line)
 			return WamlSeparateLine;
 	case '*':
 		break;
+	case '=':
+		if ( line[1] == '=' )
+			return WamlSeparateLine;
 	case ' '
 		break;
 	default:
