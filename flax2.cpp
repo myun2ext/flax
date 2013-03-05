@@ -1,6 +1,7 @@
 #include <stdio.h>
 
 int flax_readfile(const char* filename);
+int flax_read_in_stream(FILE* fp);
 
 int main(int argc, char *argv[])
 {
@@ -22,5 +23,14 @@ int flax_readfile(const char* filename)
 		return 1;
 	}
 
+	int ret = flax_read_in_stream(fp);
+	
+	fclose(fp);
+	return ret;
+}
+
+
+int flax_read_in_stream(FILE* fp)
+{
 	return 0;
 }
