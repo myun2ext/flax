@@ -26,7 +26,7 @@ class WamlDocument
 };
 
 ////////////////////////////////
-WamlLine waml_line(const char* line)
+WamlLine waml_parse_line(const char* line)
 {
 	printf("%s\n");
 	return 0;
