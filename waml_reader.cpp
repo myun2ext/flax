@@ -1,31 +1,35 @@
 #include <stdio.h>
 #include <string>
 
-class WamlSeparateLine // Splitter
-{
-};
-
 class WamlLine
 {
 };
 
-class WamlProperty
+class WamlLineBase
 {
 };
 
-class WamlListItem
+class WamlSeparate : public WamlLineBase // Splitter
 {
 };
 
-class WamlList
+class WamlProperty : public WamlLineBase
+{
+};
+
+class WamlListItem : public WamlLineBase
+{
+};
+
+class WamlList : public WamlLineBase
+{
+};
+
+class WamlNullLine : public WamlLineBase
 {
 };
 
 class WamlDocument
-{
-};
-
-class WamlNullLine
 {
 };
 
