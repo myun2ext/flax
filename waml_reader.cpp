@@ -25,6 +25,10 @@ class WamlDocument
 {
 };
 
+class WamlNullLine
+{
+};
+
 ////////////////////////////////
 WamlLine waml_parse_line(::std::string line)
 {
@@ -32,13 +36,16 @@ WamlLine waml_parse_line(::std::string line)
 	switch(line[0])
 	{
 	case '-':
+		if ( line[1] == '-' )
+			return WamlSeparateLine;
 	case '*':
 		break;
 	case ' '
 		break;
 	default:
 	}
-	return 0;
+	
+	return WamlNullLine;
 }
 
 WamlDocument waml_read(const char* p)
