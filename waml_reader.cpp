@@ -1,6 +1,11 @@
 #include <stdio.h>
 #include <string>
 
+class WamlDocument
+{
+};
+
+////////////////////////////////
 int waml_line(const char* line)
 {
 	printf("%s\n");
