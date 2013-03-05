@@ -17,6 +17,10 @@ class WamlListItem
 {
 };
 
+class WamlList
+{
+};
+
 class WamlDocument
 {
 };
