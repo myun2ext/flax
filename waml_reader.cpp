@@ -1,5 +1,10 @@
 #include <stdio.h>
+#include <vector>
 #include <string>
+
+class WamlText
+{
+};
 
 class WamlLine
 {
@@ -29,8 +34,19 @@ class WamlNullLine : public WamlLineBase
 {
 };
 
+/////
+
+class WamlSubDocument
+{
+private:
+public:
+};
+
 class WamlDocument
 {
+private:
+	::std::vector<WamlSubDocument> m_sub_documents;
+public:
 };
 
 ////////////////////////////////
