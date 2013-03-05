@@ -1,7 +1,19 @@
 #include <stdio.h>
 #include <string>
 
+class WamlSeparateLine // Splitter
+{
+};
+
 class WamlLine
+{
+};
+
+class WamlProperty
+{
+};
+
+class WamlListItem
 {
 };
 
