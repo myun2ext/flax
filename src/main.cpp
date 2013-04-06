@@ -1,8 +1,4 @@
 #include <stdio.h>
-#include "file.hpp"
-#include "alloc.hpp"
-
-using namespace roast;
 
 int main()
 {

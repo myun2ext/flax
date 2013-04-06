@@ -42,7 +42,7 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="0"
-				AdditionalIncludeDirectories="../../roast_s8_neo/include/roast"
+				AdditionalIncludeDirectories="../include"
 				PreprocessorDefinitions="WIN32;_DEBUG"
 				RuntimeLibrary="3"
 				WarningLevel="3"
@@ -113,7 +113,7 @@
 			/>
 			<Tool
 				Name="VCCLCompilerTool"
-				AdditionalIncludeDirectories="../../roast_s8_neo/include/roast"
+				AdditionalIncludeDirectories="../include"
 				PreprocessorDefinitions="WIN32;NDEBUG"
 				RuntimeLibrary="2"
 				WarningLevel="3"
@@ -167,7 +167,7 @@
 			UniqueIdentifier="{4FC737F1-C7A5-4376-A066-2A32D752A2FF}"
 			>
 			<File
-				RelativePath=".\main.cpp"
+				RelativePath="..\flax_main.cpp"
 				>
 			</File>
 		</Filter>
@@ -176,6 +176,22 @@
 			Filter="h;hpp;hxx;hm;inl;inc;xsd"
 			UniqueIdentifier="{93995380-89BD-4b04-88EB-625FBE52EBFB}"
 			>
+			<File
+				RelativePath="..\include\myun2\flax\flax.hpp"
+				>
+			</File>
+			<File
+				RelativePath="..\include\myun2\flax\parsed.hpp"
+				>
+			</File>
+			<File
+				RelativePath="..\include\myun2\flax\parser.hpp"
+				>
+			</File>
+			<File
+				RelativePath="..\include\myun2\flax\runner.hpp"
+				>
+			</File>
 		</Filter>
 		<Filter
 			Name="リソース ファイル"
