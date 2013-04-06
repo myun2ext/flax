@@ -8,7 +8,13 @@ namespace myun2
 	namespace flax
 	{
 		Document parse(const char* s)
-		{}
+		{
+			Document doc;
+			for(const char* p=s; *p != '\0'; p++)
+			{
+			}
+			return doc;
+		}
 	}
 }
 
