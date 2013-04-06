@@ -5,7 +5,7 @@ namespace myun2
 {
 	namespace flax
 	{
-		class document
+		class Document
 		{
 		};
 	}
