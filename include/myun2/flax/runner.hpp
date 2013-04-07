@@ -5,11 +5,14 @@ namespace myun2
 {
 	namespace flax
 	{
-		typedef void* context;
-
-		void run(const context &con)
+		template <typename _Result=int, typename _Context=void*>
+		class runner : 
 		{
-		}
+		public:
+			_Result run(const _Context& con)
+			{
+			}
+		};
 	}
 }
 
