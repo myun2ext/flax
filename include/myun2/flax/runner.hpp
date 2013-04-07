@@ -5,8 +5,9 @@ namespace myun2
 {
 	namespace flax
 	{
-		void run()
-		{}
+		void run(const context &con)
+		{
+		}
 	}
 }
 
