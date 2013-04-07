@@ -5,7 +5,14 @@ namespace myun2
 {
 	namespace flax
 	{
-		class Document
+		template <typename _Result=int, typename _Context=void*>
+		class runnable
+		{
+		public:
+			_Result run(const _Context& con) = 0;
+		};
+
+		class executable
 		{
 		};
 	}
