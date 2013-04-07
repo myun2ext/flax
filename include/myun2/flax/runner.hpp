@@ -5,6 +5,8 @@ namespace myun2
 {
 	namespace flax
 	{
+		typedef void* context;
+
 		void run(const context &con)
 		{
 		}
