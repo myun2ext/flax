@@ -9,7 +9,7 @@ namespace myun2
 		class runnable
 		{
 		public:
-			_Result run(const _Context& con) = 0;
+			virtual _Result run(const _Context& con) = 0;
 		};
 
 		class executable
