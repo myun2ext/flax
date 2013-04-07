@@ -11,6 +11,14 @@ namespace myun2
 		public:
 			_Result run(const _Context& con)
 			{
+				_Result r;
+
+				while(*con)
+				{
+				
+				}
+
+				return r;
 			}
 		};
 	}
