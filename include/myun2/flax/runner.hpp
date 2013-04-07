@@ -15,7 +15,7 @@ namespace myun2
 
 				while(*con)
 				{
-				
+					++con;
 				}
 
 				return r;
