@@ -17,6 +17,7 @@ namespace myun2
 
 				while(*con)
 				{
+					printf("%c", *con);
 					++con;
 				}
 
