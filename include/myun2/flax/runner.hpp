@@ -8,7 +8,7 @@ namespace myun2
 	namespace flax
 	{
 		template <typename _Result=int, typename _Context=void*>
-		class runner : runnable
+		class runner : public runnable<_Result, _Context>
 		{
 		public:
 			_Result run(const _Context& con)
