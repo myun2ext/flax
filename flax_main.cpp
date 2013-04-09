@@ -6,7 +6,7 @@ using namespace myun2::flax;
 int main(int argc, char *argv[])
 {
 	runner<> r;
-	r.run("aaa");
+	r.run("aaa\n");
 	
 	return 0;
 }

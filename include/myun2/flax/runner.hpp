@@ -7,18 +7,19 @@ namespace myun2
 {
 	namespace flax
 	{
-		template <typename _Result=int, typename _Context=void*>
+		template <typename _Result=int, typename _Context=char*>
 		class runner : public runnable<_Result, _Context>
 		{
 		public:
-			_Result run(const _Context& con)
+			_Result run(const _Context& context)
 			{
 				_Result r;
 
-				while(*con)
+				_Context p = context;
+				while(*p)
 				{
-					printf("%c", *con);
-					++con;
+					printf("%c", *p);
+					++p;
 				}
 
 				return r;
