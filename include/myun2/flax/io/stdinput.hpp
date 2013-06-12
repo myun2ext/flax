@@ -8,6 +8,7 @@ namespace myun2
 		struct stdinput
 		{
 			int read() { return getchar(); }
+			bool is_end(int c) { c == EOF; }
 		};
 	}
 }
