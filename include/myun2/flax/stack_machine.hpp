@@ -5,6 +5,7 @@ namespace myun2
 {
 	namespace flax
 	{
+		template <typename ReadStream, typename WriteStream>
 		class stack_machine
 		{
 		public:
