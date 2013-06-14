@@ -1,13 +1,15 @@
 #ifndef __github_com_myun2__flax__io__stdoutput_HPP__
 #define __github_com_myun2__flax__io__stdoutput_HPP__
 
+#include <stdio.h>
+
 namespace myun2
 {
 	namespace flax
 	{
 		struct stdoutput
 		{
-			void write(int c) { return putchar(c); }
+			void write(int c) { putchar(c); }
 		};
 	}
 }
