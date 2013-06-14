@@ -12,8 +12,7 @@ public:
 	{
 		write(v);
 		if ( v == '\n' ){
-			write('>');
-			write(' ');
+			puts("> ");
 		}
 		return true;
 	}

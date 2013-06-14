@@ -23,6 +23,12 @@ namespace myun2
 			WriteStream& writer() { return m_writer; }
 			const T& read() { return m_reader.read(); }
 			void write(const T& v) { m_writer.write(v); }
+			void puts(const char* s) {
+				while(*s) {
+					m_writer.write(*s);
+					s++;
+				}
+			}
 		};
 	}
 }
