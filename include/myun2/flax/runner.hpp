@@ -13,9 +13,12 @@ namespace myun2
 			WriteStream m_writer;
 		public:
 			runner(){}
-			runner(const ReadStream &reader, const WriteStream &writer)
-				: m_reader(reader), m_writer(writer) {}
+			runner(const ReadStream &in_reader, const WriteStream &in_writer)
+				: m_reader(in_reader), m_writer(in_writer) {}
 			virtual void run()=0;
+
+			ReadStream& reader(){ return m_reader; }
+			WriteStream& writer(){ return m_writer; }
 		};
 	}
 }
