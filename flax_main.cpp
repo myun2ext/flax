@@ -9,6 +9,7 @@ int main(
 )
 {
 	stack_machine<io::stdinput, io::stdoutput> machine;
+	machine.run();
 
 	return 0;
 }

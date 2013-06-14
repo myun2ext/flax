@@ -11,12 +11,12 @@ namespace myun2
 		class serial_runner : public runner<ReadStream, WriteStream>
 		{
 		public:
-			typename ReadStream::T T, Type;
+			typedef typename ReadStream::T T, Type;
 			serial_runner(){}
 			serial_runner(const ReadStream &in_reader, const WriteStream &in_writer)
 				: runner<ReadStream, WriteStream>(in_reader, in_writer) {}
 			
-			bool action(const T& v)=0;
+			virtual bool action(const T& v)=0;
 			void run()
 			{
 				while(1)
