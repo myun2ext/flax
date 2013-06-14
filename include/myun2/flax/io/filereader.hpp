@@ -17,7 +17,7 @@ namespace myun2
 				FILE* fp;
 			public:
 				filereader(const char* path, bool binary=true) {
-					fp = fopen(path);
+					fp = fopen(path, binary ? "rb" : "r");
 					if ( fp == NULL )
 						throw filereader_open_error();
 				}
