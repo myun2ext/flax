@@ -8,7 +8,7 @@ int main(
 	int argc, char *argv[]
 )
 {
-	stack_machine<io::stdinput, io::stdoutput> machine;
+	stack_machine<int, io::stdinput, io::stdoutput> machine;
 	machine.run();
 
 	return 0;
