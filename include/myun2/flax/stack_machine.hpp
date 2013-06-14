@@ -8,7 +8,16 @@ namespace myun2
 		template <typename ReadStream, typename WriteStream>
 		class stack_machine
 		{
+		private:
+			ReadStream m_reader;
+			WriteStream m_writer;
 		public:
+			stack_machine(){}
+			stack_machine(const ReadStream &reader, const WriteStream &writer)
+				: m_reader(reader), m_writer(writer) {}
+			void run()
+			{
+			}
 		};
 	}
 }
