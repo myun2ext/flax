@@ -7,10 +7,13 @@ namespace myun2
 {
 	namespace flax
 	{
-		struct stdoutput
+		namespace io
 		{
-			void write(int c) { putchar(c); }
-		};
+			struct stdoutput
+			{
+				void write(int c) { putchar(c); }
+			};
+		}
 	}
 }
 

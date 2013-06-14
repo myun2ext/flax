@@ -1,14 +1,12 @@
 #ifndef __github_com_myun2__flax__runner_HPP__
 #define __github_com_myun2__flax__runner_HPP__
 
-#include "myun2/flax/parsed.hpp"
-
 namespace myun2
 {
 	namespace flax
 	{
 		template <typename _Result=int, typename _Context=char*>
-		class runner : public runnable<_Result, _Context>
+		class runner
 		{
 		public:
 			_Result run(const _Context& context)

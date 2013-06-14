@@ -7,11 +7,14 @@ namespace myun2
 {
 	namespace flax
 	{
-		struct stdinput
+		namespace io
 		{
-			int read() { return getchar(); }
-			bool is_end(int c) { c == EOF; }
-		};
+			struct stdinput
+			{
+				int read() { return getchar(); }
+				bool is_end(int c) const { return c == EOF; }
+			};
+		}
 	}
 }
 

@@ -170,34 +170,38 @@
 				RelativePath="..\flax_main.cpp"
 				>
 			</File>
+			<File
+				RelativePath="..\include\myun2\flax\stack_machine.hpp"
+				>
+			</File>
 		</Filter>
 		<Filter
 			Name="ヘッダー ファイル"
 			Filter="h;hpp;hxx;hm;inl;inc;xsd"
 			UniqueIdentifier="{93995380-89BD-4b04-88EB-625FBE52EBFB}"
 			>
-			<File
-				RelativePath="..\include\myun2\flax\flax.hpp"
-				>
-			</File>
-			<File
-				RelativePath="..\include\myun2\flax\parsed.hpp"
-				>
-			</File>
-			<File
-				RelativePath="..\include\myun2\flax\parser.hpp"
-				>
-			</File>
-			<File
-				RelativePath="..\include\myun2\flax\runner.hpp"
-				>
-			</File>
 		</Filter>
 		<Filter
 			Name="リソース ファイル"
 			Filter="rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav"
 			UniqueIdentifier="{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}"
 			>
+		</Filter>
+		<Filter
+			Name="io"
+			>
+			<File
+				RelativePath="..\include\myun2\flax\io\stack.hpp"
+				>
+			</File>
+			<File
+				RelativePath="..\include\myun2\flax\io\stdinput.hpp"
+				>
+			</File>
+			<File
+				RelativePath="..\include\myun2\flax\io\stdoutput.hpp"
+				>
+			</File>
 		</Filter>
 	</Files>
 	<Globals>
