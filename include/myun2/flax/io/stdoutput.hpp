@@ -11,6 +11,7 @@ namespace myun2
 		{
 			struct stdoutput
 			{
+				typedef int T;
 				void write(int c) { putchar(c); }
 			};
 		}

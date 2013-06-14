@@ -13,6 +13,7 @@ namespace myun2
 		private:
 			::std::stack<T> m_stack;
 		public:
+			typedef T _T;
 			void write(const &T x) { push(x); }
 			void push(const &T x) { m_stack.push(x); }
 			T pop() { return m_stack.pop(); }

@@ -11,6 +11,7 @@ namespace myun2
 		{
 			struct stdinput
 			{
+				typedef int T;
 				int read() { return getchar(); }
 				bool is_end(int c) const { return c == EOF; }
 			};
