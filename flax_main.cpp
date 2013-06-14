@@ -4,11 +4,16 @@
 
 using namespace myun2::flax;
 
+class example_machine :
+	public stack_machine<int, io::stdinput, io::stdoutput>
+{
+};
+
 int main(
 	int argc, char *argv[]
 )
 {
-	stack_machine<int, io::stdinput, io::stdoutput> machine;
+	example_machine machine;
 	machine.run();
 
 	return 0;
