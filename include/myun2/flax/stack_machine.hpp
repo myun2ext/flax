@@ -1,22 +1,22 @@
 #ifndef __github_com_myun2__flax__stack_machine_HPP__
 #define __github_com_myun2__flax__stack_machine_HPP__
 
+#include "myun2/flax/runner.hpp"
+
 namespace myun2
 {
 	namespace flax
 	{
 		template <typename ReadStream, typename WriteStream>
-		class stack_machine
+		class stack_machine : public runner<ReadStream, WriteStream>
 		{
-		private:
-			ReadStream m_reader;
-			WriteStream m_writer;
 		public:
 			stack_machine(){}
 			stack_machine(const ReadStream &reader, const WriteStream &writer)
-				: m_reader(reader), m_writer(writer) {}
+				: runner<ReadStream, WriteStream>(reader, writer) {}
 			void run()
 			{
+
 			}
 		};
 	}

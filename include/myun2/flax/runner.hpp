@@ -5,23 +5,17 @@ namespace myun2
 {
 	namespace flax
 	{
-		template <typename _Result=int, typename _Context=char*>
+		template <typename ReadStream, typename WriteStream>
 		class runner
 		{
+		private:
+			ReadStream m_reader;
+			WriteStream m_writer;
 		public:
-			_Result run(const _Context& context)
-			{
-				_Result r;
-
-				_Context p = context;
-				while(*p)
-				{
-					printf("%c", *p);
-					++p;
-				}
-
-				return r;
-			}
+			runner(){}
+			runner(const ReadStream &reader, const WriteStream &writer)
+				: m_reader(reader), m_writer(writer) {}
+			virtual void run()=0;
 		};
 	}
 }
