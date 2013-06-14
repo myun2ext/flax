@@ -12,15 +12,26 @@ namespace myun2
 		{
 		private:
 			::std::vector<T> m_memory;
+			size_t m_pos;
 		public:
-			void write(const &T val, size_t pos)
+			memory(){ m_pos = 0; }
+			void write(const &T val, size_t pos = 0xffffffff)
 			{
+				if ( pos == 0xffffffff) {
+					pos = m_pos;
+					++m_pos;
+				}
 				if ( size() <= pos )
 					resize(pos+1, T());
 				m_memory[pos] = val;
 			}
-			T read()
+
+			T read(size_t pos = 0xffffffff)
 			{
+				if ( pos == 0xffffffff) {
+					pos = m_pos;
+					++m_pos;
+				}
 				return m_memory[pos];
 			}
 		};
