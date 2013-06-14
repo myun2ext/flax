@@ -13,8 +13,8 @@ namespace myun2
 		private:
 			::std::stack<T> m_stack;
 		public:
-			void write(T x) { push(x); }
-			void push(T x) { m_stack.push(x); }
+			void write(const &T x) { push(x); }
+			void push(const &T x) { m_stack.push(x); }
 			T pop() { return m_stack.pop(); }
 			T read() { return m_stack.pop(); }
 		};
