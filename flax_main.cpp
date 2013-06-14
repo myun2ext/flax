@@ -7,6 +7,16 @@ using namespace myun2::flax;
 class example_machine :
 	public stack_machine<int, io::stdinput, io::stdoutput>
 {
+public:
+	bool action(const T& v)
+	{
+		write(v);
+		if ( v == '\n' ){
+			write('>');
+			write(' ');
+		}
+		return true;
+	}
 };
 
 int main(

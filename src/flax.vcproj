@@ -170,16 +170,24 @@
 				RelativePath="..\flax_main.cpp"
 				>
 			</File>
-			<File
-				RelativePath="..\include\myun2\flax\stack_machine.hpp"
-				>
-			</File>
 		</Filter>
 		<Filter
 			Name="ヘッダー ファイル"
 			Filter="h;hpp;hxx;hm;inl;inc;xsd"
 			UniqueIdentifier="{93995380-89BD-4b04-88EB-625FBE52EBFB}"
 			>
+			<File
+				RelativePath="..\include\myun2\flax\runner.hpp"
+				>
+			</File>
+			<File
+				RelativePath="..\include\myun2\flax\serial_runner.hpp"
+				>
+			</File>
+			<File
+				RelativePath="..\include\myun2\flax\stack_machine.hpp"
+				>
+			</File>
 		</Filter>
 		<Filter
 			Name="リソース ファイル"

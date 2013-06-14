@@ -11,7 +11,6 @@ namespace myun2
 		class serial_runner : public runner<ReadStream, WriteStream>
 		{
 		public:
-			typedef typename ReadStream::T T, Type;
 			serial_runner(){}
 			serial_runner(const ReadStream &in_reader, const WriteStream &in_writer)
 				: runner<ReadStream, WriteStream>(in_reader, in_writer) {}
@@ -21,7 +20,7 @@ namespace myun2
 			{
 				while(1)
 				{
-					Type v = reader().read();
+					Type v = read();
 					if ( reader().is_end(v) )
 						break;
 					if ( !action(v) )

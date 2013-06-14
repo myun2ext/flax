@@ -25,7 +25,7 @@ namespace myun2
 
 			bool action(const T& v)
 			{
-				writer().write(v);
+				write(v);
 				return true;
 			}
 		};
