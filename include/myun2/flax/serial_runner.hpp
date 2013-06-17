@@ -11,6 +11,7 @@ namespace myun2
 		class serial_runner : public runner<ReadStream, WriteStream>
 		{
 		public:
+			typedef typename ReadStream::T T, Type;
 			serial_runner(){}
 			serial_runner(const ReadStream &in_reader, const WriteStream &in_writer)
 				: runner<ReadStream, WriteStream>(in_reader, in_writer) {}
