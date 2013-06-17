@@ -20,7 +20,9 @@ namespace myun2
 			virtual void run()=0;
 
 			ReadStream& reader() { return m_reader; }
+			const ReadStream& reader() const { return m_reader; }
 			WriteStream& writer() { return m_writer; }
+			const WriteStream& writer() const { return m_writer; }
 			const T& read() { return m_reader.read(); }
 			void write(const T& v) { m_writer.write(v); }
 			void puts(const char* s) {
@@ -29,6 +31,7 @@ namespace myun2
 					s++;
 				}
 			}
+			bool eor() const { return reader().is_end(); }
 		};
 	}
 }

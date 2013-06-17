@@ -10,7 +10,7 @@ namespace myun2
 		namespace io
 		{
 			struct filewriter_open_error {};
-			
+
 			class filewriter
 			{
 			private:
