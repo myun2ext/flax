@@ -13,7 +13,8 @@ namespace myun2
 			{
 				typedef int T;
 				int read() { return getchar(); }
-				bool is_end(int c) const { return c == EOF; }
+				//bool is_end(int c) const { return c == EOF; }
+				bool is_end() const { return feof(stdin) != 0; }
 			};
 		}
 	}

@@ -15,9 +15,9 @@ namespace myun2
 			::std::stack<StateType> m_state_stack;
 		protected:
 			::std::stack<StateType>& states() { m_state_stack; }
-			void push(const StateType& state) { m_state_stack.push(state); }
-			StateType pop() { return m_state_stack.pop(); }
-			StateType top() { return m_state_stack.top(); }
+			void push_state(const StateType& state) { m_state_stack.push(state); }
+			const StateType& pop_state() { return m_state_stack.pop(); }
+			const StateType& current_state() const { return m_state_stack.top(); }
 		public:
 			stack_machine(){}
 			stack_machine(const ReadStream &reader, const WriteStream &writer)

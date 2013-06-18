@@ -10,7 +10,7 @@ namespace myun2
 		namespace io
 		{
 			struct filereader_open_error {};
-			
+
 			class filereader
 			{
 			private:

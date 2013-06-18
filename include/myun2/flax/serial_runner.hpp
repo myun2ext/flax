@@ -22,7 +22,7 @@ namespace myun2
 				while(1)
 				{
 					Type v = read();
-					if ( reader().is_end(v) )
+					if ( eor() )
 						break;
 					if ( !action(v) )
 						break;
