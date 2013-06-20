@@ -10,6 +10,8 @@ namespace myun2
 		template <typename ReadStream, typename WriteStream>
 		class serial_runner : public runner<ReadStream, WriteStream>
 		{
+		private:
+			typedef runner<ReadStream, WriteStream> _Base;
 		public:
 			typedef typename ReadStream::T T, Type;
 			serial_runner(){}
@@ -21,8 +23,8 @@ namespace myun2
 			{
 				while(1)
 				{
-					Type v = read();
-					if ( eor() )
+					Type v = _Base::read();
+					if ( _Base::eor() )
 						break;
 					if ( !action(v) )
 						break;

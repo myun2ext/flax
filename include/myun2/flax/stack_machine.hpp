@@ -19,6 +19,7 @@ namespace myun2
 			const StateType& pop_state() { return m_state_stack.pop(); }
 			const StateType& current_state() const { return m_state_stack.top(); }
 		public:
+			typedef typename ReadStream::T T, Type;
 			stack_machine(){}
 			stack_machine(const ReadStream &reader, const WriteStream &writer)
 				: serial_runner<ReadStream, WriteStream>(reader, writer) {}
