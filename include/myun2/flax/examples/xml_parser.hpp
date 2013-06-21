@@ -1,6 +1,8 @@
 #ifndef __github_com_myun2__flax__examples__xml_parser_HPP__
 #define __github_com_myun2__flax__examples__xml_parser_HPP__
 
+#include "myun2/flax/util/ws_split_reader.hpp"
+
 namespace myun2
 {
 	namespace flax
@@ -9,7 +11,7 @@ namespace myun2
 		{
 			template <typename ReadStream, typename WriteStream>
 			class xml_parser :
-				public stack_machine<int, ReadStream, WriteStream>
+				public ws_split_reader<int, ReadStream, WriteStream>
 			{
 			protected:
 				bool action(const T& v)
