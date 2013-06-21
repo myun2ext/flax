@@ -12,6 +12,7 @@ namespace myun2
 		class stack_machine : public serial_runner<ReadStream, WriteStream>
 		{
 		private:
+			typedef serial_runner<ReadStream, WriteStream> _Base;
 			::std::stack<StateType> m_state_stack;
 		protected:
 			::std::stack<StateType>& states() { m_state_stack; }
@@ -26,7 +27,7 @@ namespace myun2
 
 			bool action(const T& v)
 			{
-				write(v);
+				_Base::write(v);
 				return true;
 			}
 		};
