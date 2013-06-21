@@ -17,12 +17,21 @@ namespace myun2
 				typedef ref_counter Counter;
 				Counter reference_counter;
 				Resrouce r;
-
 			protected:
-				virtual release() =0;
+				Resrouce& _resource() { return r; }
+				const Resrouce& _resource() const { return r; }
+				Resrouce& get_resource() { return r; }
+				const Resrouce& get_resource() const { return r; }
+
+				virtual void release() =0;
 
 			public:
 				shared_resource()
+				{
+					reference_counter.up();
+				}
+				shared_resource(const Resrouce& r_in)
+					: r(r_in)
 				{
 					reference_counter.up();
 				}

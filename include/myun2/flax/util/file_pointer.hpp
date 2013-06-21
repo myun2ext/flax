@@ -10,14 +10,17 @@ namespace myun2
 	{
 		namespace util
 		{
-			class file_pointer
+			class file_pointer : public shared_resource<FILE*>
 			{
+			private:
+				void release() {
+					fclose(get_resource());
+				}
 			public:
-				shared_resource<FILE*> _fp;
-			public:
-				file_pointer(FILE* fp) : _fp(fp) {}
-				operator FILE*() { return _fp; }
-				operator const FILE*() const { return _fp; }
+				file_pointer(FILE* fp) : shared_resource<FILE*>(fp) {}
+				//shared_resource<FILE*> _fp;
+				operator FILE*() { return get_resource(); }
+				operator const FILE*() const { return get_resource(); }
 			};
 		}
 	}
