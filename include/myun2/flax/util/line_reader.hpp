@@ -17,7 +17,8 @@ namespace myun2
 				line_reader(const &_Reader r) : _Reader(r){}
 
 				typedef ::std::string T;
-				::std::string read() { return getc(fp); }
+				::std::string read() {
+				}
 				bool is_end() const { return _Reader::is_end(); }
 			};
 		}
