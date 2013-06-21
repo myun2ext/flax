@@ -14,15 +14,18 @@ namespace myun2
 			class filewriter
 			{
 			private:
-				FILE* fp;
+				FILE* m_fp;
 			public:
-				filereader(const char* path, bool binary=true) {
-					fp = fopen(path, binary ? "rb" : "r");
-					if ( fp == NULL )
+				filewriter(const char* path, bool binary=true) {
+					m_fp = fopen(path, binary ? "wb" : "w");
+					if ( m_fp == NULL )
 						throw filewriter_open_error();
 				}
+				virtual ~filewriter() {
+					fclose(m_fp);
+				}
 				typedef int T;
-				void write(int c) { putchar(c); }
+				void write(int c) { putc(c, m_fp); }
 			};
 		}
 	}
