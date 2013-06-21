@@ -2,6 +2,7 @@
 #define __github_com_myun2__flax__io__filewriter_HPP__
 
 #include <stdio.h>
+#include "myun2/flax/util/file_pointer.hpp"
 
 namespace myun2
 {
@@ -14,7 +15,7 @@ namespace myun2
 			class filewriter
 			{
 			private:
-				FILE* m_fp;
+				util::file_pointer m_fp;
 			public:
 				filewriter(const char* path, bool binary=true) {
 					m_fp = fopen(path, binary ? "wb" : "w");
