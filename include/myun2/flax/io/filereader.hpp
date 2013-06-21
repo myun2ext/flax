@@ -14,16 +14,19 @@ namespace myun2
 			class filereader
 			{
 			private:
-				FILE* fp;
+				FILE* m_fp;
 			public:
 				filereader(const char* path, bool binary=true) {
-					fp = fopen(path, binary ? "rb" : "r");
-					if ( fp == NULL )
+					m_fp = fopen(path, binary ? "rb" : "r");
+					if ( m_fp == NULL )
 						throw filereader_open_error();
 				}
+				virtual ~filereader() {
+					fclose(m_fp);
+				}
 				typedef int T;
-				int read() { return getc(fp); }
-				bool is_end() const { return feof(fp) != 0; }
+				int read() { return getc(m_fp); }
+				bool is_end() const { return feof(m_fp) != 0; }
 			};
 		}
 	}
