@@ -23,7 +23,7 @@ namespace myun2
 			const ReadStream& reader() const { return m_reader; }
 			WriteStream& writer() { return m_writer; }
 			const WriteStream& writer() const { return m_writer; }
-			const T& read() { return m_reader.read(); }
+			T read() { return m_reader.read(); }
 			void write(const T& v) { m_writer.write(v); }
 			void puts(const char* s) {
 				while(*s) {
