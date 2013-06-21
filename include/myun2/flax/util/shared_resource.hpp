@@ -15,11 +15,23 @@ namespace myun2
 			private:
 				typedef T Resrouce;
 				typedef ref_counter Counter;
-				Counter counter;
+				Counter reference_counter;
 				Resrouce r;
+
 			protected:
 				virtual release() =0;
-				
+
+			public:
+				shared_resource()
+				{
+					reference_counter.up();
+				}
+				virtual ~shared_resource()
+				{
+					reference_counter.down();
+					if ( reference_counter.is_zero() )
+						release();
+				}
 			};
 		}
 	}

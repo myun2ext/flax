@@ -9,10 +9,11 @@ namespace myun2
 		{
 			struct ref_counter
 			{
-				unsigned int count;
-				void up() { ++count; }
-				void down() { --count; }
-				unsigned int count_value() const { return count; }
+				unsigned int m_count;
+				void up() { ++m_count; }
+				void down() { --m_count; }
+				unsigned int count() const { return m_count; }
+				bool is_zero() const { return m_count == 0; }
 			};
 		}
 	}
