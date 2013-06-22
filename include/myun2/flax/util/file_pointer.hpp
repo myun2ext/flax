@@ -12,11 +12,12 @@ namespace myun2
 		{
 			class file_pointer : public shared_resource<FILE*>
 			{
-			private:
+			protected:
 				void release() {
 					fclose(get_resource());
 				}
 			public:
+				file_pointer() : shared_resource<FILE*>(NULL) {}
 				file_pointer(FILE* fp) : shared_resource<FILE*>(fp) {}
 				//shared_resource<FILE*> _fp;
 				operator FILE*() { return get_resource(); }
