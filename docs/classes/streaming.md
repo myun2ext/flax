@@ -20,6 +20,8 @@ Output Classes have one method.
 
 `write` method write one of item to output stream.
 
+**Constructor Is Not Constant** parameters, it is different for each class.
+
 ### filereader
 
 `filereader` is for File Read Streaming Class.
