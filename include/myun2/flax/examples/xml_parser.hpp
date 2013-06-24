@@ -9,17 +9,30 @@ namespace myun2
 	{
 		namespace example
 		{
-			template <typename ReadStream, typename WriteStream>
+			namespace xml_parser_internal
+			{
+				struct xml_header
+				{
+					static const char* version_str() const { return "version"; }
+					static const char* encoding_str() const { return "encoding"; }
+					static const char* standalone_str() const { return "standalone"; }
+
+					std::string version;
+					std::string encoding;
+					std::string standalone;
+				};
+			}
+
+			/////////////
+
+			template <typename ReadStream>
 			class xml_parser :
-				public ws_split_reader<int, ReadStream, WriteStream>
+				public stack_machine<ws_split_reader<int, ReadStream> >
 			{
 			protected:
-				bool action(const T& v)
+				bool action(const ::std::string& token)
 				{
-					write(v);
-					if ( v == '\n' ){
-						puts("> ");
-					}
+					state
 					return true;
 				}
 			};
