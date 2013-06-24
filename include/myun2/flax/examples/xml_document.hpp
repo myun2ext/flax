@@ -22,10 +22,19 @@ namespace myun2
 				::std::string standalone;
 			};
 
+			struct xml_element_content
+			{
+				::std::vector<> text_allocates;
+			private:
+				::std::vector<xml_element> element_allocates;
+				::std::vector<::std::string> text_allocates;
+			};
+
 			struct xml_element
 			{
 				::std::string name;
 				::std::map<std::string, std::string> attributes;
+				::std::vector<
 			};
 
 			struct xml_document
