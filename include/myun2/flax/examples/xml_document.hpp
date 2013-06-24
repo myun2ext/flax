@@ -24,12 +24,13 @@ namespace myun2
 
 			struct xml_element
 			{
+				std::string tag_name;
 			};
 
 			struct xml_document
 			{
+				xml_header header;
 				xml_element root;
-				
 			};
 		}
 	}
