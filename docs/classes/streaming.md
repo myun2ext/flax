@@ -16,7 +16,9 @@ Input Classes have two methods.
 
 Output Classes have one method.
 
-* `void write(const T& val)`
+* `void write(const T& val);`
+
+`write` method write one of item to output stream.
 
 ### filereader
 
