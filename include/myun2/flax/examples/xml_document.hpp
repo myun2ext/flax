@@ -22,9 +22,15 @@ namespace myun2
 				std::string standalone;
 			};
 
+			struct xml_attribute
+			{
+				std::string name;
+				std::string value;
+			};
+
 			struct xml_element
 			{
-				std::string tag_name;
+				std::string name;
 			};
 
 			struct xml_document
