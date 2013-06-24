@@ -17,20 +17,15 @@ namespace myun2
 				static const char* encoding_str() const { return "encoding"; }
 				static const char* standalone_str() const { return "standalone"; }
 
-				std::string version;
-				std::string encoding;
-				std::string standalone;
-			};
-
-			struct xml_attribute
-			{
-				std::string name;
-				std::string value;
+				::std::string version;
+				::std::string encoding;
+				::std::string standalone;
 			};
 
 			struct xml_element
 			{
-				std::string name;
+				::std::string name;
+				::std::map<std::string, std::string> attributes;
 			};
 
 			struct xml_document
