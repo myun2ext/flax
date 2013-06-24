@@ -41,11 +41,31 @@ Output Classes have one method.
 
 `filewriter` is for File Write Streaming Class.
 
+* `typedef int T`
+* `void write(int c)`
+
+`T` is fixed `int` of Type.
+`write()` is like or in fact `putc()`.
 
 ### stdinput
 
 `stdinput` is for Standard Input Streaming Class.
 
+* `typedef int T`
+* `int read()`
+* `bool is_end()`
+
+`T` is fixed `int` of Type.
+
+`read()` is like or in fact `getchar()`.
+`is_end()` is like or in fact `feof(stdin) != 0`.
+
 ### stdoutput
 
 `stdoutput` is for Standard Input Streaming Class.
+
+* `typedef int T`
+* `void write(int c)`
+
+`T` is fixed `int` of Type.
+`read()` is like or in fact `putchar()`.
