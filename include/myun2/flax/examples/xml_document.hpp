@@ -32,9 +32,20 @@ namespace myun2
 
 			struct xml_element
 			{
+			private:
+				struct node {
+					enum {
+						text,
+						element
+					} type_ type;
+					void* ptr;	//	xml_element or ::std::string pointer.
+				};
+				::std::vector<xml_element> element_allocates;
+				::std::vector<::std::string> text_allocates;
+			public:
 				::std::string name;
 				::std::map<std::string, std::string> attributes;
-				::std::vector<
+				::std::vector<node> childs;
 			};
 
 			struct xml_document
