@@ -1,5 +1,14 @@
 # Streaming Classes
 
+## Basically
+
+Streaming Classes is Two major, **Input(Reader)** and **Output(Writer)**.
+
+Input Classes have two methods.
+
+* `T read();`
+* `bool is_end();`
+
 ### filereader
 
 `filereader` is for File Read Streaming Class.
