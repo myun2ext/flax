@@ -11,16 +11,6 @@ namespace myun2
 		{
 			namespace xml_parser_internal
 			{
-				struct xml_header
-				{
-					static const char* version_str() const { return "version"; }
-					static const char* encoding_str() const { return "encoding"; }
-					static const char* standalone_str() const { return "standalone"; }
-
-					std::string version;
-					std::string encoding;
-					std::string standalone;
-				};
 			}
 
 			/////////////
