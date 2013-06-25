@@ -14,7 +14,7 @@ namespace myun2
 			{
 			public:
 				line_reader(){}
-				line_reader(const &_Reader r) : _Reader(r){}
+				line_reader(const _Reader &r) : _Reader(r){}
 
 				typedef ::std::string T;
 				::std::string read() {
@@ -23,7 +23,7 @@ namespace myun2
 						int c = _Reader::read();
 						if ( is_end() )
 							break;
-						if ( c == '\r' c == '\n' )
+						if ( c == '\r' || c == '\n' )
 							break;
 						buf += c;
 					}

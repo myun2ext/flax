@@ -1,7 +1,7 @@
 #ifndef __github_com_myun2__flax__io__line_writer_HPP__
 #define __github_com_myun2__flax__io__line_writer_HPP__
 
-#include <stdio.h>
+#include <string>
 
 namespace myun2
 {
@@ -14,7 +14,7 @@ namespace myun2
 			{
 			public:
 				line_writer(){}
-				line_writer(const &_Writer w) : _Writer(w){}
+				line_writer(const _Writer &w) : _Writer(w){}
 
 				typedef const char* T;
 				void write(const char* s) {
@@ -22,6 +22,7 @@ namespace myun2
 						_Writer::write(*s++);
 					}
 				}
+				void write(const ::std::string &s) { write(s.c_str()); }
 			};
 		}
 	}
