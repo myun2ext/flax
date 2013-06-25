@@ -1,15 +1,14 @@
-#include "myun2/flax/serial_runner.hpp"
+#include "myun2/flax/util/serial_reader.hpp"
 #include "myun2/flax/io/stdinput.hpp"
 #include "myun2/flax/io/stdoutput.hpp"
 
 using namespace myun2::flax;
 
-class echoback :
-	public serial_runner<io::stdinput, io::stdoutput>
+class echoback : public serial_reader<io::stdinput>
 {
-public:
+	io::stdoutput writer;
 	bool action(const T& v) {
-		write(v);
+		writer.write(v);
 		return true;
 	}
 };
