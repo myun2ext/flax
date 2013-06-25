@@ -6,9 +6,7 @@
 
 When an object is copied, call `fclose` when the last instance is released.
 
-### ws_split_reader
 
-`ws_split_reader` class was read of Whitespace tokenized.
 
 ### looper
 
