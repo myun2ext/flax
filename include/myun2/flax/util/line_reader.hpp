@@ -18,6 +18,16 @@ namespace myun2
 
 				typedef ::std::string T;
 				::std::string read() {
+					::std::string buf;
+					while(1) {
+						int c = _Reader::read();
+						if ( is_end() )
+							break;
+						if ( c == '\r' c == '\n' )
+							break;
+						buf += c;
+					}
+					return buf;
 				}
 				bool is_end() const { return _Reader::is_end(); }
 			};

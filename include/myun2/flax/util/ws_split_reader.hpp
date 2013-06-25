@@ -37,7 +37,7 @@ namespace myun2
 						if ( is_end() )
 							break;
 						if ( is_ws(c) )
-							continue;
+							break;
 						buf += c;
 					}
 					return buf;
